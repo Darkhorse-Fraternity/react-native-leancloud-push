@@ -28,6 +28,10 @@ public class LeanCloudPush extends ReactContextBaseJavaModule {
     private static Map<String, String> backgroundNotificationCache = null;
     private static String ON_RECEIVE = "leancloudPushOnReceive";
     private static String ON_ERROR = "leancloudPushOnError";
+    //是否是前端全局标识
+    public static  boolean isForegroud = false;
+    //通知栏全局图标
+    public static int iconId;
 
     public LeanCloudPush(ReactApplicationContext reactContext) {
         super(reactContext);
