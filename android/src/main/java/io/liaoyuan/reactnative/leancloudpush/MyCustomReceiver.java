@@ -45,10 +45,12 @@ public class MyCustomReceiver extends BroadcastReceiver {
                 map.put("data", data);
                 if(LeanCloudPush.isForegroud){
                     //前台直接回传JS
+                    map.put("foreground", "1");
                     LeanCloudPush.onReceive(map);
                     Log.i(LeanCloudPush.MODULE_NAME, "onReceive: action = " + action + ", channel = " + channel + ", data = " + data);
                 }else {
                     //后台创建通知栏消息
+                    map.put("foreground", "0");
                     receivingNotification(context,map,intent,data);
 
                 }

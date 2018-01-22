@@ -53,6 +53,7 @@ public class LeanCloudPush extends ReactContextBaseJavaModule {
         writableMap.putString("action", map.get("action"));
         writableMap.putString("channel", map.get("channel"));
         writableMap.putString("data", map.get("data"));
+        writableMap.putString("foreground", map.get("foreground"));
         return writableMap;
     }
 
